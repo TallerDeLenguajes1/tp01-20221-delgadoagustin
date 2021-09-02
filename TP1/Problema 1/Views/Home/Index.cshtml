@@ -3,9 +3,9 @@
 }
 
 @*<div class="text-center">
-    <h1 class="display-4">welcome</h1>
-    <p>learn about <a href="https://docs.microsoft.com/aspnet/core">building web apps with asp.net core</a>.</p>
-</div>*@
+        <h1 class="display-4">welcome</h1>
+        <p>learn about <a href="https://docs.microsoft.com/aspnet/core">building web apps with asp.net core</a>.</p>
+    </div>*@
 <h2>Calcular Cuadrado de un numero</h2>
 <form asp-action="Problema1" asp-controller="Home" method="post">
     <label>Ingresa un número</label>
@@ -21,10 +21,18 @@
     <input id="Submit1" type="submit" value="Calcular" />
 </form>
 
+<h2>Listado de Provincias</h2>
 <form asp-action="Problema3" asp-controller="Home" method="post">
     <label>Mostrar Listado de Provincias</label>
     <input id="Submit1" type="submit" value="Mostrar" />
+</form>
 
+<h2>Calculo de kilometros por litro</h2>
+<form asp-action="Problema4" asp-controller="Home" method="post">
+    <label>Ingresa kilometros recorridos y litros usados</label>
+    <input type="number" name="km" value="" />
+    <input type="number" name="lt" value="" />
+    <input id="Submit1" type="submit" value="Calcular" />
 </form>
 
 

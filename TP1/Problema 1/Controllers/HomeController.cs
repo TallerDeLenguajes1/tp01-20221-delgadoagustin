@@ -72,6 +72,14 @@ namespace Problema_1.Controllers
             return View();
         }
 
+        public string Problema4(float km, float lt)
+        {
+            float calculo = km / lt;
+            return "Recorrio "+calculo.ToString()+" km por litro";
+
+        }
+
+        // Clases para Problema 3
         //*********************************************
         public class Parametros
         {
