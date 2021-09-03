@@ -46,9 +46,18 @@ namespace Problema_1.Controllers
             }
         }
 
-        public float Problema2(float num,float den)
+        public string Problema2(float num, float den)
         {
-            return num/den;
+            try
+            {
+                float division = num / den;
+                return division.ToString();
+            }
+            catch (DivideByZeroException ex)
+            {
+                return ex.ToString();
+            }
+
         }
 
         public IActionResult Problema3()
