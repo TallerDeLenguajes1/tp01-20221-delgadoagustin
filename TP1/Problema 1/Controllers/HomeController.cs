@@ -32,12 +32,20 @@ namespace Problema_1.Controllers
         {
             return View();
         }
-        
-        public int Problema1(int num)
+
+        public string Problema1(int num)
         {
-            return num*num;
+            try
+            {
+                int cuadrado = num * num;
+                return cuadrado.ToString();
+            }
+            catch (Exception ex)
+            {
+                return ex.ToString();
+            }
         }
-        
+
         public float Problema2(float num,float den)
         {
             return num/den;
@@ -50,7 +58,7 @@ namespace Problema_1.Controllers
             request.Method="GET";
             request.ContentType="application/json";
             request.Accept = "application/json";
-            List<Provincia> lista = new List<Provincia>();
+            List<Provincia> lista = new();
             using (WebResponse response = request.GetResponse())
             {
                 using(Stream strReader = response.GetResponseStream())
@@ -76,7 +84,6 @@ namespace Problema_1.Controllers
         {
             float calculo = km / lt;
             return "Recorrio "+calculo.ToString()+" km por litro";
-
         }
 
         // Clases para Problema 3
